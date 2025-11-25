@@ -73,28 +73,28 @@ class Ball(
         if (posX - radius < 0) {
             posX = radius
             velocityX = 0f
-            accX = 0f
+            // DON'T reset accX - it comes from sensor!
         }
 
         // Check right boundary
         if (posX + radius > backgroundWidth) {
             posX = backgroundWidth - radius
             velocityX = 0f
-            accX = 0f
+            // DON'T reset accX - it comes from sensor!
         }
 
         // Check top boundary
         if (posY - radius < 0) {
             posY = radius
             velocityY = 0f
-            accY = 0f
+            // DON'T reset accY - it comes from sensor!
         }
 
         // Check bottom boundary
         if (posY + radius > backgroundHeight) {
             posY = backgroundHeight - radius
             velocityY = 0f
-            accY = 0f
+            // DON'T reset accY - it comes from sensor!
         }
     }
 

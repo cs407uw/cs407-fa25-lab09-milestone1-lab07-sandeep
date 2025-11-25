@@ -49,7 +49,7 @@ class BallViewModel : ViewModel() {
 
                 // Get sensor acceleration values and scale them
                 // X-axis is the same, Y-axis is inverted (sensor Y+ = up, screen Y+ = down)
-                val xAcc = event.values[0] * SCALE_FACTOR
+                val xAcc = -event.values[0] * SCALE_FACTOR
                 val yAcc = event.values[1] * SCALE_FACTOR
 
                 // Update the ball's position and velocity
